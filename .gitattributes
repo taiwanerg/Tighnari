@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# CMD launcher: preserve Windows line endings on every checkout.
+gdms.bat text eol=crlf

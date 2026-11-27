@@ -1,0 +1,41 @@
+{
+  "description": "Independent waveform studies; catalog coordinates and mechanisms are never locator inputs. Window centers may be rounded rapid-report times.",
+  "before_s": 60,
+  "after_s": 240,
+  "gdms_channels": [
+    "HH?",
+    "HN?"
+  ],
+  "cases": [
+    {
+      "id": "20240403-hualien",
+      "title": "0403 花蓮地震",
+      "window_center_utc": "2024-04-02T23:58:10Z",
+      "reference_url": "https://www.cwa.gov.tw/Data/service/Newsbb/CH/Newsbb_20240403225329.pdf"
+    },
+    {
+      "id": "20250121-chianan",
+      "title": "0121 嘉南地震",
+      "window_center_utc": "2025-01-20T16:17:27Z",
+      "reference_url": "https://scweb.cwa.gov.tw/zh-TW/earthquake/Details/EE2025012100172664007"
+    },
+    {
+      "id": "20251227-yilan",
+      "title": "1227 宜蘭地震",
+      "window_center_utc": "2025-12-27T15:05:56Z",
+      "reference_url": "https://scweb.cwa.gov.tw/zh-tw/earthquake/imgslimit/2025122723055670156"
+    },
+    {
+      "id": "20261109-gukeng",
+      "title": "古坑 115079 地震",
+      "window_center_utc": "2026-11-09T04:21:57Z",
+      "reference_url": "https://scweb.cwa.gov.tw/zh-tw/earthquake/details/2026110912215742079"
+    },
+    {
+      "id": "20220918-taitung",
+      "title": "0918 臺東池上地震",
+      "window_center_utc": "2022-09-18T06:44:15Z",
+      "reference_url": "https://scweb.cwa.gov.tw/zh-tw/earthquake/details/2022091814441568111"
+    }
+  ]
+}

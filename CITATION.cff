@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this research software, cite this project and the methods/data sources listed in README.md."
+title: "Tighnari-SeisLOC"
+version: "0.2.0"
+license: AGPL-3.0-only
+type: software
+repository-code: "https://github.com/taiwanerg/Tighnari-SeisLOC"
+authors:
+  - name: "Tighnari-SeisLOC contributors"

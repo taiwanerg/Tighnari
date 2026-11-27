@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#2c596b" />
+    <title>Tighnari SeisLOC</title>
+    <link rel="stylesheet" href="/static/style.css?v=20261127-about-v1" />
+    <link rel="modulepreload" href="/static/common.js?v=20261127-best-fit-v1" />
+    <link rel="preload" href="/geography/regional_land.geojson" as="fetch" crossorigin />
+    <link rel="preload" href="/geography/taiwan_towns_display.geojson" as="fetch" crossorigin />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">Tighnari SeisLOC</a>
+      <a href="/records" class="quiet">地震記錄總覽</a><a href="/about" class="quiet">關於</a>
+      <a class="site-title" href="https://www.twerg.org">Supported by TWERG</a>
+      <div class="header-status">
+        <span id="connection">連線中</span><time id="clock">—</time>
+      </div>
+      <details class="system-status">
+        <summary>系統狀態</summary>
+        <div>
+          <div id="pipeline-state">正在連接 IRIS 測站</div>
+        </div>
+      </details>
+    </header>
+    <main class="dashboard">
+      <section class="map-card panel">
+        <div class="panel-head">
+          <h1 id="state-label">等待定位</h1>
+          <span id="source-badge">即時資料</span>
+        </div>
+        <div class="map-content">
+          <div id="summary" class="summary"><p>尚無地震定位結果</p></div>
+          <div class="map-area">
+            <svg
+              id="map"
+              viewBox="0 0 600 800"
+              aria-label="震央與測站位置"
+              role="img"
+            ></svg>
+            <div class="map-legend">
+              <span class="epicenter-key">★ 震央</span
+              ><span class="used-key">▲ 定位測站</span
+              ><span class="other-key">△ 其他測站</span
+              ><span class="p-circle-key">○ P 波到時圈</span><span><i class="location-boundary-key"></i>定位範圍</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="right-stack">
+
+        <section class="events-panel panel">
+          <div class="panel-head">
+            <h2>地震記錄 <span id="event-total">0</span></h2>
+            <div class="controls">
+              <label class="ml-filter"><input id="require-ml" type="checkbox" checked />排除無規模</label>
+              <select id="mode" aria-label="事件來源">
+                <option value="live">即時地震</option>
+                <option value="historical">實測回放</option>
+                <option value="all">全部記錄</option>
+              </select>
+              <button id="prev" aria-label="上一頁">上一頁</button
+              ><button id="next" aria-label="下一頁">下一頁</button>
+            </div>
+          </div>
+          <div class="event-columns">
+            <span>位置 / 時間</span><span>規模</span><span>深度</span>
+          </div>
+          <div id="events" class="event-list">
+            <p class="empty">尚無地震記錄</p>
+          </div>
+        </section>
+        <section class="wave-panel panel">
+          <div class="panel-head">
+            <h2>測站波形</h2>
+            <span id="wave-status">等待 IRIS 資料</span>
+          </div>
+          <p id="picker-status" class="wave-note" role="status">等待相位辨識資料</p>
+          <div class="wave-controls">
+            <input id="search" aria-label="搜尋測站" placeholder="搜尋測站" />
+            <select id="window" aria-label="波形時間窗">
+              <option value="60">1 分鐘</option>
+              <option value="120" selected>2 分鐘</option>
+              <option value="300">5 分鐘</option>
+              <option value="600">10 分鐘</option>
+            </select>
+            <button id="pause">暫停</button><button id="live">回到最新</button>
+            <details class="wave-options">
+              <summary>波形設定</summary>
+              <div class="advanced-controls">
+                <label
+                  >排序
+                  <select id="sort">
+                    <option value="name">台灣優先</option>
+                    <option value="amplitude">依振幅</option>
+                    <option value="lat">由北到南</option>
+                  </select></label
+                >
+                <label><input id="fixed" type="checkbox" />固定尺度</label>
+                <label
+                  >±
+                  <input
+                    id="scale"
+                    type="number"
+                    min="0.001"
+                    value="100"
+                    step="10"
+                    aria-label="固定波形尺度 µm/s"
+                  />
+                  µm/s</label
+                >
+                <button id="choose">選擇測站</button>
+                <p id="gain-note">各站自動縮放，波形高度不可直接比較振幅。</p>
+                <div id="station-choices" class="station-choices" hidden></div>
+              </div>
+            </details>
+          </div>
+          <div id="wave-scroll" class="wave-scroll">
+            <div id="wave-spacer"><div id="wave-rows"></div></div>
+            <p id="wave-empty" class="empty">等待 IRIS 波形資料</p>
+          </div>
+          <div class="wave-time" id="wave-time">
+            垂直速度 µm/s · 各站自動縮放
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <span>僅供參考，地震資訊應以中央氣象署為準。本研究使用氣象署地震及地球物理資料管理系統的觀測資料，資料公開網址為https://gdms.cwa.gov.tw。</span>
+    </footer>
+    <script type="module" src="/static/dashboard.js?v=20261127-best-fit-v1"></script>
+  </body>
+</html>

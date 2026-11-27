@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>事件詳細資訊 · Tighnari</title>
+    <link rel="stylesheet" href="/static/style.css?v=20261127-about-v1" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">Tighnari SeisLOC</a
+      ><a href="/" class="quiet">返回首頁</a
+      ><a href="/records" class="quiet">地震記錄總覽</a><a href="/about" class="quiet">關於</a><span class="header-status" id="connection">載入事件…</span>
+    </header>
+    <main class="detail-main">
+      <div class="detail-heading">
+        <div>
+          <h1 id="title">事件詳細資訊</h1>
+          <p id="subtitle" class="muted">—</p>
+        </div>
+        <div class="actions">
+          <a id="download-image" class="quiet">下載定位圖</a
+          ><a id="download-json" class="quiet">下載分析 JSON</a>
+        </div>
+      </div>
+      <div class="notice" id="notice">
+        自動定位，未經人工覆核。品質等級不是機率。
+      </div>
+      <div class="notice" id="review-notice" hidden></div>
+      <div class="detail-layout">
+        <section class="panel detail-map">
+          <label class="map-view-control">定位圖顯示
+        <select id="map-view" aria-label="定位圖顯示方式">
+          <option value="overview" selected>大地圖</option>
+          <option value="closeup">震央附近</option>
+        </select>
+      </label>
+      <svg id="summary-map" role="img" aria-label="摘要震央位置" hidden></svg>
+      <img id="report" class="report-image" alt="地震定位報告圖" />
+        </section>
+        <section class="panel detail-block detail-params">
+          <h2>震源參數與品質</h2>
+          <dl id="parameters"></dl>
+          <h2 id="depth-diagnostics-title" style="margin-top: 25px">深度擬合診斷</h2>
+          <canvas
+            id="depth-chart"
+            class="diagnostic-chart"
+            aria-label="固定深度後重新反演之到時 RMS"
+          ></canvas>
+          <p id="depth-note" class="muted"></p>
+        </section>
+        <section class="panel detail-mechanism" id="mechanism-section" hidden>
+          <div class="panel-head"><h2>機制解計算</h2><span class="muted" id="first-motion-role"></span></div>
+          <p id="mechanism-note" class="wave-note"></p>
+          <img id="mechanism-report" alt="實驗性震源機制與資料品質" style="width:100%;height:auto" loading="lazy">
+          <details id="gdms-polarity-details" hidden>
+            <summary id="gdms-polarity-summary">GDMS 逐站初動診斷</summary>
+            <p class="wave-note">到時以理論 P 到時為零點；機率為模型估計，尚未校準。</p>
+            <div class="table-scroll"><table>
+              <thead><tr><th>頻道</th><th>原 P 偏差 s</th><th>檢出 P 偏差 s</th><th>上 / 下 / 不明</th><th>結果</th><th>原因</th></tr></thead>
+              <tbody id="gdms-polarity-rows"></tbody>
+            </table></div>
+          </details>
+        </section>
+        <section class="panel detail-research" id="research-section" hidden aria-labelledby="research-title">
+          <div class="panel-head"><h2 id="research-title">自動機制試算</h2><span class="muted" id="research-state" role="status"></span></div>
+          <div class="research-body">
+            <p class="wave-note">以波形與初動自動計算的研究候選，未經人工覆核；只有通過品質檢查的候選會繪出海灘球，研究首選另標於定位圖右下。</p>
+            <div id="research-primary" class="research-cards"></div>
+            <details id="research-more" hidden>
+              <summary id="research-more-label">研究診斷：未通過的候選</summary>
+              <div id="research-others" class="research-cards"></div>
+            </details>
+            <div id="research-jobs" class="research-jobs"></div>
+          </div>
+        </section>
+      </div>
+      <nav class="detail-tabs">
+        <a href="#revisions">定位修訂</a><a href="#waveforms">事件波形</a
+        ><a href="#magnitudes">單站規模</a><a href="#support-section">輔助測站</a
+        ><a href="#phases">P/S 到時與殘差</a>
+      </nav>
+      <section class="panel detail-section" id="revisions">
+        <div class="panel-head">
+          <h2>定位修訂歷程</h2>
+          <select id="revision" aria-label="選取修訂">
+            <option value="">最新修訂</option>
+          </select>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>修訂</th>
+                <th>儲存時間 UTC+8</th>
+                <th>緯度</th>
+                <th>經度</th>
+                <th>深度 km</th>
+                <th>ML</th>
+                <th>RMS s</th>
+              </tr>
+            </thead>
+            <tbody id="revision-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel detail-section" id="waveforms">
+        <div class="panel-head">
+          <h2>事件垂直波形</h2>
+          <div class="controls">
+            <select id="window" aria-label="事件波形窗">
+              <option value="60">1 分鐘</option>
+              <option value="120" selected>2 分鐘</option>
+              <option value="300">5 分鐘</option>
+              <option value="600">10 分鐘</option></select
+            ><button id="earlier">← 較早</button
+            ><button id="later">較晚 →</button
+            ><button id="reset">回到事件</button>
+          </div>
+        </div>
+        <p class="wave-note">
+          逐站自動增益 · 速度 µm/s · 實線 P/S 為定位採用 · 虛線 P?/S? 與觸發為候選
+          <label><input id="show-candidates" type="checkbox" />顯示未採用候選</label>
+        </p>
+        <div id="detail-waves" class="detail-wave-list"></div>
+        <div id="wave-time" class="wave-time"></div>
+      </section>
+      <section class="panel detail-section" id="magnitudes">
+        <div class="panel-head">
+          <h2>單站規模與拒收原因</h2>
+          <span class="muted">ML / Mwp 使用不同處理鏈</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>類型</th>
+                <th>測站</th>
+                <th>規模</th>
+                <th>距離</th>
+                <th>訊噪比</th>
+                <th>結果</th>
+              </tr>
+            </thead>
+            <tbody id="mag-rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel detail-section" id="support-section" hidden>
+        <div class="panel-head"><h2>輔助測站採用紀錄</h2></div>
+        <p class="wave-note">近站先獨立通過定位門檻；300–600 km 降低權重，600 km 外僅供佐證。</p>
+        <div class="table-scroll"><table>
+          <thead><tr><th>測站</th><th>相位</th><th>距離 km</th><th>結果</th><th>原因</th></tr></thead>
+          <tbody id="support-rows"></tbody>
+        </table></div>
+      </section>
+      <section class="panel detail-section" id="regional-cmt-section" hidden>
+        <div class="panel-head"><h2>臺灣區域 CMT（實驗）</h2><span class="muted" id="regional-cmt-role"></span></div>
+        <p id="regional-cmt-note" class="wave-note"></p>
+        <details id="regional-cmt-comparison" hidden>
+          <summary id="regional-cmt-comparison-label">比較候選機制</summary>
+          <div id="regional-cmt-candidates" class="cmt-candidates"></div>
+        </details>
+        <div id="regional-cmt-solution" hidden>
+          <img id="regional-cmt-ball" width="180" height="180" alt="區域矩張量海灘球，北方朝上" loading="lazy">
+          <p id="regional-cmt-source" class="wave-note"></p>
+          <p id="regional-cmt-planes" class="wave-note"></p>
+          <details>
+            <summary>逐站波形擬合</summary>
+            <div class="table-scroll"><table>
+              <thead><tr><th>測站</th><th>距離 km</th><th>訊噪比</th><th>留一站預測 VR %</th></tr></thead>
+              <tbody id="regional-cmt-stations"></tbody>
+            </table></div>
+          </details>
+        </div>
+      </section>
+      <section class="panel detail-section" id="phases">
+        <div class="panel-head">
+          <h2>P/S 到時與殘差</h2>
+          <span class="muted">採用與拒收分開標示</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>測站</th>
+                <th>相位</th>
+                <th>觀測時間 UTC+8</th>
+                <th>殘差 s</th>
+                <th>挑波分數</th>
+                <th>採用</th>
+              </tr>
+            </thead>
+            <tbody id="phase-rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <span>僅供參考，地震資料應以中央氣象署為準。本研究使用氣象署地震及地球物理資料管理系統的觀測資料，資料公開網址為https://gdms.cwa.gov.tw。</span>
+    </footer>
+    <script type="module" src="/static/detail.js?v=20261127-cap-band-v1"></script>
+  </body>
+</html>

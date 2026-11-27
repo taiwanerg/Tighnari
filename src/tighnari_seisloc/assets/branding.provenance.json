@@ -1,0 +1,8 @@
+{
+  "asset": "twerg_logo_clear.png",
+  "owner": "Taiwan Earthquake Recording Group (TWERG)",
+  "source": "TWERG-Bot/photos/twerg_logo_clear.png",
+  "usage": "TWERG Tighnari-SeisLOC map watermark",
+  "rendering_reference": "TWERG-Bot/module/map_base.py logo/mono_logo; TWERG-Bot/cogs/eq_emulator.py",
+  "note": "Bundled asset. Trademark rights remain with the owner."
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#10191b" />
+    <title>關於 · Tighnari</title>
+    <link rel="stylesheet" href="/static/style.css?v=20261127-about-v1" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">Tighnari SeisLOC</a>
+      <nav class="site-nav" aria-label="主要導覽"><a href="/">即時觀測</a><a href="/records">地震記錄總覽</a><a href="/about" aria-current="page">關於</a></nav>
+    </header>
+    <main class="records-main" aria-label="關於 Tighnari">
+      <article class="about-article">
+        <h2>版本</h2>
+        <p>Tighnari 版本 0.2.0</p>
+
+        <h2>Tighnari 是什麼</h2>
+        <p>Tighnari-SeisLOC 是以公開地震測站資料為基礎的臺灣地區自動地震定位系統，並自動估算臺灣附近地震的震央、深度、發震時間、地震規模、地震類型等資訊。</p>
+        <p>所有結果僅供參考，非官方地震報告，也並非地震預警。任何地震資訊應以<a href="https://www.cwa.gov.tw/" target="_blank" rel="noopener">中央氣象署</a>為準。</p>
+
+        <h2>Tighnari 的原理</h2>
+        <p>系統從 EarthScope SeedLink 接收公開測站的即時波形，以 PhaseNet 挑選 P 波與 S 波到時，再把多個測站的到時關聯成同一個地震事件。接著以臺灣一維速度模型反推震源位置與發震時間，並依解的穩定度給出 A～D 的品質等級。</p>
+        <p>規模以模擬 Wood–Anderson 地震儀的最大振幅計算臺灣 ML；較大的地震另以寬頻 P 波估算 Mwp。地震發生後，系統也會嘗試以 P 波初動計算震源機制，此部分仍屬實驗性結果，通過品質門檻才會顯示。</p>
+
+        <h2>參考來源</h2>
+        <ul>
+          <li>PhaseNet：Zhu &amp; Beroza (2019), <i>Geophys. J. Int.</i>, 216(1), 261–273.</li>
+          <li>臺灣 ML：Shin (1993), <i>Terr. Atmos. Ocean. Sci.</i>, 4(2), 155–170.</li>
+          <li>臺灣一維速度模型：Wu et al. (2007), <i>J. Geophys. Res.</i>, 112, B08312.</li>
+          <li>Mwp：Tsuboi et al. (1995), <i>Bull. Seismol. Soc. Am.</i>, 85(2), 606–613.</li>
+          <li>初動解品質：Hardebeck &amp; Shearer (2002), <i>Bull. Seismol. Soc. Am.</i>, 92(6), 2264–2276.</li>
+        </ul>
+        <p>完整的方法與資料來源列表請見專案 <a href="https://github.com/taiwanerg/Tighnari-SeisLOC#references" target="_blank" rel="noopener">README</a>。</p>
+
+        <h2>特別感謝</h2>
+        <ul>
+          <li>EarthScope／IRIS：SeedLink 即時波形與 FDSN 測站資料</li>
+          <li>中央氣象署 GDMS</li>
+          <li>中央研究院地球科學研究所</li>
+          <li>GFZ GEOFON</li>
+          <li>SeisBench、ObsPy、Pyrocko 開源專案的開發者與社群</li>
+          <li>HoYoverse 原神</li>
+        </ul>
+
+        <h2>作者</h2>
+        <p>地牛記錄小組 TWERG (Taiwan Earthquake Recording Group)</p>
+        <p>原始碼：<a href="https://github.com/taiwanerg/Tighnari-SeisLOC" target="_blank" rel="noopener">github.com/taiwanerg/Tighnari-SeisLOC</a></p>
+
+        <h2>License</h2>
+        <p>本專案以 <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">GNU Affero General Public License v3.0（AGPL-3.0）</a> 發佈。</p>
+        <p>您可以自由使用、修改與散布本程式。修改後的版本若透過網路提供服務，也必須向使用者公開對應的原始碼。</p>
+        <p>歡迎自由引用、轉載與使用本網站的地震資料，惟請註明出處並標記「地震資料應以中央氣象署為準」，且不得竄改或偽造數據。</p>
+        <p>第三方程式、模型權重、字型、地圖資料與 TWERG 標誌各自保留原授權。TWERG 名稱與 Logo 不在本授權範圍內。</p>
+      </article>
+    </main>
+  </body>
+</html>

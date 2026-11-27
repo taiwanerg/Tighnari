@@ -1,0 +1,2151 @@
+{
+  "catalog_query": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2021-12-31T16%3a00%3a00Z&endtime=2026-11-23T16%3a00%3a00Z&minlatitude=21.7&maxlatitude=25.6&minlongitude=119.5&maxlongitude=123.0&minmagnitude=6.0&eventtype=earthquake&orderby=time-asc",
+  "catalog_count": 13,
+  "summary": {
+    "centroid": {
+      "cases": 8,
+      "clean_quality_pass": 0,
+      "signed_mw_median": 0.17943669662027117,
+      "abs_mw_median": 0.17943669662027117,
+      "abs_mw_at_most_0_2": 6,
+      "kagan_median_deg": 41.65595511248198,
+      "kagan_at_most_30": 3,
+      "abs_depth_median_km": 12.0,
+      "centroid_distance_median_km": 31.088800780349672,
+      "holdout_vr_median_pct": 74.43174754363986,
+      "horizontal_grid_edge": 5,
+      "unresolved_depth": 8,
+      "all_reasons": {
+        "holdout_fit": 1,
+        "horizontal_grid_edge": 5,
+        "sensitivity_model_missing": 8,
+        "unresolved_centroid": 8,
+        "unresolved_horizontal_centroid": 8,
+        "unstable_mechanism": 3,
+        "waveform_fit": 4
+      }
+    },
+    "fixed": {
+      "cases": 8,
+      "clean_quality_pass": 0,
+      "signed_mw_median": 0.13022668004679883,
+      "abs_mw_median": 0.13022668004679883,
+      "abs_mw_at_most_0_2": 7,
+      "kagan_median_deg": 41.82624979061643,
+      "kagan_at_most_30": 3,
+      "abs_depth_median_km": 12.0,
+      "centroid_distance_median_km": 25.628534279943878,
+      "holdout_vr_median_pct": 76.12694166878421,
+      "horizontal_grid_edge": 0,
+      "unresolved_depth": 8,
+      "all_reasons": {
+        "holdout_fit": 1,
+        "sensitivity_model_missing": 8,
+        "unresolved_centroid": 8,
+        "unstable_mechanism": 3,
+        "waveform_fit": 4
+      }
+    },
+    "low_frequency_fixed": {
+      "cases": 4,
+      "clean_quality_pass": 0,
+      "signed_mw_median": 0.14445919895058923,
+      "abs_mw_median": 0.14445919895058923,
+      "abs_mw_at_most_0_2": 2,
+      "kagan_median_deg": 40.68791460331152,
+      "kagan_at_most_30": 1,
+      "abs_depth_median_km": 11.5,
+      "centroid_distance_median_km": 18.527062021090433,
+      "holdout_vr_median_pct": 71.88904365418213,
+      "horizontal_grid_edge": 0,
+      "unresolved_depth": 4,
+      "all_reasons": {
+        "holdout_fit": 1,
+        "sensitivity_model_missing": 4,
+        "unresolved_centroid": 4,
+        "unstable_mechanism": 1,
+        "waveform_fit": 2
+      }
+    },
+    "centroid_usgs_seed": {
+      "cases": 3,
+      "clean_quality_pass": 0,
+      "signed_mw_median": 0.0466527758184645,
+      "abs_mw_median": 0.0466527758184645,
+      "abs_mw_at_most_0_2": 3,
+      "kagan_median_deg": 11.414996813586413,
+      "kagan_at_most_30": 3,
+      "abs_depth_median_km": 6.5,
+      "centroid_distance_median_km": 31.398869375817814,
+      "holdout_vr_median_pct": 90.64407825754404,
+      "horizontal_grid_edge": 0,
+      "unresolved_depth": 3,
+      "all_reasons": {
+        "sensitivity_model_missing": 3,
+        "unresolved_centroid": 3,
+        "unresolved_horizontal_centroid": 3
+      }
+    },
+    "expanded_centroid": {
+      "cases": 2,
+      "clean_quality_pass": 0,
+      "signed_mw_median": 0.08025645656480451,
+      "abs_mw_median": 0.08025645656480451,
+      "abs_mw_at_most_0_2": 2,
+      "kagan_median_deg": 28.649758830190706,
+      "kagan_at_most_30": 1,
+      "abs_depth_median_km": 12.5,
+      "centroid_distance_median_km": 30.31638369960442,
+      "holdout_vr_median_pct": 75.13702637738315,
+      "horizontal_grid_edge": 1,
+      "unresolved_depth": 2,
+      "all_reasons": {
+        "horizontal_grid_edge": 1,
+        "sensitivity_model_missing": 2,
+        "unresolved_centroid": 2,
+        "unresolved_horizontal_centroid": 2
+      }
+    }
+  },
+  "standard_then_expanded": {
+    "cases": 10,
+    "clean_quality_pass": 0,
+    "signed_mw_median": 0.1441688106397656,
+    "abs_mw_median": 0.1441688106397656,
+    "abs_mw_at_most_0_2": 8,
+    "kagan_median_deg": 33.871400797306265,
+    "kagan_at_most_30": 4,
+    "abs_depth_median_km": 12.5,
+    "centroid_distance_median_km": 31.088800780349672,
+    "holdout_vr_median_pct": 74.43174754363986,
+    "horizontal_grid_edge": 6,
+    "unresolved_depth": 10,
+    "all_reasons": {
+      "holdout_fit": 1,
+      "horizontal_grid_edge": 6,
+      "sensitivity_model_missing": 10,
+      "unresolved_centroid": 10,
+      "unresolved_horizontal_centroid": 10,
+      "unstable_mechanism": 3,
+      "waveform_fit": 4
+    }
+  },
+  "summary_without_close_event_pairs": {
+    "cases": 5,
+    "clean_quality_pass": 0,
+    "signed_mw_median": 0.17205560003119214,
+    "abs_mw_median": 0.17205560003119214,
+    "abs_mw_at_most_0_2": 4,
+    "kagan_median_deg": 48.69520183660491,
+    "kagan_at_most_30": 2,
+    "abs_depth_median_km": 9.5,
+    "centroid_distance_median_km": 28.650560709602892,
+    "holdout_vr_median_pct": 81.59519093046826,
+    "horizontal_grid_edge": 2,
+    "unresolved_depth": 5,
+    "all_reasons": {
+      "horizontal_grid_edge": 2,
+      "sensitivity_model_missing": 5,
+      "unresolved_centroid": 5,
+      "unresolved_horizontal_centroid": 5,
+      "unstable_mechanism": 2,
+      "waveform_fit": 2
+    }
+  },
+  "tighnari_seed_centroid": {
+    "cases": 3,
+    "clean_quality_pass": 0,
+    "signed_mw_median": 0.05453938321787,
+    "abs_mw_median": 0.05453938321787,
+    "abs_mw_at_most_0_2": 3,
+    "kagan_median_deg": 8.391063039808635,
+    "kagan_at_most_30": 3,
+    "abs_depth_median_km": 6.5,
+    "centroid_distance_median_km": 30.868491274993037,
+    "holdout_vr_median_pct": 88.85592503534153,
+    "horizontal_grid_edge": 1,
+    "unresolved_depth": 3,
+    "all_reasons": {
+      "horizontal_grid_edge": 1,
+      "sensitivity_model_missing": 3,
+      "unresolved_centroid": 3,
+      "unresolved_horizontal_centroid": 3,
+      "unstable_mechanism": 1
+    }
+  },
+  "usgs_seed_centroid": {
+    "cases": 5,
+    "clean_quality_pass": 0,
+    "signed_mw_median": 0.1868177932093502,
+    "abs_mw_median": 0.1868177932093502,
+    "abs_mw_at_most_0_2": 3,
+    "kagan_median_deg": 48.69520183660491,
+    "kagan_at_most_30": 0,
+    "abs_depth_median_km": 14.5,
+    "centroid_distance_median_km": 31.309110285706307,
+    "holdout_vr_median_pct": 51.97618906744813,
+    "horizontal_grid_edge": 4,
+    "unresolved_depth": 5,
+    "all_reasons": {
+      "holdout_fit": 1,
+      "horizontal_grid_edge": 4,
+      "sensitivity_model_missing": 5,
+      "unresolved_centroid": 5,
+      "unresolved_horizontal_centroid": 5,
+      "unstable_mechanism": 2,
+      "waveform_fit": 4
+    }
+  },
+  "cases": [
+    {
+      "id": "us7000g8n3",
+      "name": "66 km E of Hualien City, Taiwan",
+      "time_taipei": "2022-01-03T17:46:35.767000+08:00",
+      "catalog_magnitude": 6.2,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000g8n3/moment-tensor",
+      "seed": {
+        "origin": 1641203195.767,
+        "lat": 24.0079,
+        "lon": 122.2592,
+        "depth_km": 19,
+        "id": "us7000g8n3",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "replay_global_cmt.py: error: Only 5 usable long-period stations",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 4 usable long-period stations",
+        "control.log": "replay_global_cmt.py: error: Only 5 usable long-period stations",
+        "expanded/replay.log": "replay_global_cmt.py: error: Only 8 usable long-period stations"
+      },
+      "results": {}
+    },
+    {
+      "id": "us6000h6nr",
+      "name": "65 km S of Hualien City, Taiwan",
+      "time_taipei": "2022-03-23T01:41:38.584000+08:00",
+      "catalog_magnitude": 6.7,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000h6nr/moment-tensor",
+      "seed": {
+        "origin": 1647970898.584,
+        "lat": 23.3839,
+        "lon": 121.6118,
+        "depth_km": 24,
+        "id": "us6000h6nr",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 16 6.784020067191054 67.26830415681147",
+        "long-fixed.log": "unconstrained 12 6.710054362267341 54.45559527288212",
+        "control.log": "unconstrained 16 6.788397760062406 67.98705966572501"
+      },
+      "results": {
+        "centroid": {
+          "file": "us6000h6nr/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 16,
+          "mw": 6.784020067191054,
+          "centroid_depth_km": 16.0,
+          "centroid_location": {
+            "lat": 23.11301351781514,
+            "lon": 121.6118
+          },
+          "offset_km": [
+            0,
+            -30
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76
+          ],
+          "holdout_vr_pct": 67.26830415681147,
+          "comparison": {
+            "product": "us_6000h6nr_mww",
+            "version": 1653762925040,
+            "method": "mww",
+            "mw": 6.7,
+            "depth_km": 40.5,
+            "centroid": {
+              "lat": 23.2421,
+              "lon": 121.8543
+            },
+            "mw_delta": 0.08402006719105426,
+            "depth_delta_km": -24.5,
+            "centroid_distance_km": 28.650560709602892,
+            "kagan_deg": 61.148206323971266
+          }
+        },
+        "fixed": {
+          "file": "us6000h6nr/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 16,
+          "mw": 6.788397760062406,
+          "centroid_depth_km": 16.0,
+          "centroid_location": {
+            "lat": 23.3839,
+            "lon": 121.6118
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80
+          ],
+          "holdout_vr_pct": 67.98705966572501,
+          "comparison": {
+            "product": "us_6000h6nr_mww",
+            "version": 1653762925040,
+            "method": "mww",
+            "mw": 6.7,
+            "depth_km": 40.5,
+            "centroid": {
+              "lat": 23.2421,
+              "lon": 121.8543
+            },
+            "mw_delta": 0.08839776006240552,
+            "depth_delta_km": -24.5,
+            "centroid_distance_km": 29.357424644202734,
+            "kagan_deg": 48.03497761903732
+          }
+        },
+        "low_frequency_fixed": {
+          "file": "us6000h6nr/long-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.0015,
+            0.005
+          ],
+          "station_count": 12,
+          "mw": 6.710054362267341,
+          "centroid_depth_km": 16.0,
+          "centroid_location": {
+            "lat": 23.3839,
+            "lon": 121.6118
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": 54.45559527288212,
+          "comparison": {
+            "product": "us_6000h6nr_mww",
+            "version": 1653762925040,
+            "method": "mww",
+            "mw": 6.7,
+            "depth_km": 40.5,
+            "centroid": {
+              "lat": 23.2421,
+              "lon": 121.8543
+            },
+            "mw_delta": 0.0100543622673408,
+            "depth_delta_km": -24.5,
+            "centroid_distance_km": 29.357424644202734,
+            "kagan_deg": 43.36353017925174
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000h82f",
+      "name": "70 km SW of Yonakuni, Japan",
+      "time_taipei": "2022-05-09T14:23:02.067000+08:00",
+      "catalog_magnitude": 6.2,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000h82f/moment-tensor",
+      "seed": {
+        "origin": 1652077382.067,
+        "lat": 24.0406,
+        "lon": 122.4888,
+        "depth_km": 21,
+        "id": "us7000h82f",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 12 6.372055600031192 51.97618906744813",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 5 usable long-period stations",
+        "control.log": "unconstrained 12 6.372055600031192 51.97618906744813"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000h82f/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 12,
+          "mw": 6.372055600031192,
+          "centroid_depth_km": 40.0,
+          "centroid_location": {
+            "lat": 24.040599999999998,
+            "lon": 122.4888
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": 51.97618906744813,
+          "comparison": {
+            "product": "us_7000h82f_mww",
+            "version": 1658514668040,
+            "method": "mww",
+            "mw": 6.2,
+            "depth_km": 25.5,
+            "centroid": {
+              "lat": 24.0222,
+              "lon": 122.5011
+            },
+            "mw_delta": 0.17205560003119214,
+            "depth_delta_km": 14.5,
+            "centroid_distance_km": 2.391419704952437,
+            "kagan_deg": 48.69520183660491
+          }
+        },
+        "fixed": {
+          "file": "us7000h82f/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 12,
+          "mw": 6.372055600031192,
+          "centroid_depth_km": 40.0,
+          "centroid_location": {
+            "lat": 24.040599999999998,
+            "lon": 122.4888
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": 51.97618906744813,
+          "comparison": {
+            "product": "us_7000h82f_mww",
+            "version": 1658514668040,
+            "method": "mww",
+            "mw": 6.2,
+            "depth_km": 25.5,
+            "centroid": {
+              "lat": 24.0222,
+              "lon": 122.5011
+            },
+            "mw_delta": 0.17205560003119214,
+            "depth_delta_km": 14.5,
+            "centroid_distance_km": 2.391419704952437,
+            "kagan_deg": 48.69520183660491
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000i8ui",
+      "name": "96 km SE of Lugu, Taiwan",
+      "time_taipei": "2022-09-17T21:41:17.890000+08:00",
+      "catalog_magnitude": 6.5,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000i8ui/moment-tensor",
+      "seed": {
+        "origin": 1663422077.89,
+        "lat": 23.1191,
+        "lon": 121.4138,
+        "depth_km": 10,
+        "id": "us7000i8ui",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 17 6.933063405024319 81.59519093046826",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 9 usable long-period stations",
+        "control.log": "unconstrained 17 6.837149566015499 84.26682367184341"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000i8ui/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 17,
+          "mw": 6.933063405024319,
+          "centroid_depth_km": 4.0,
+          "centroid_location": {
+            "lat": 22.84793411832291,
+            "lon": 121.12150869344923
+          },
+          "offset_km": [
+            -30,
+            -30
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28
+          ],
+          "holdout_vr_pct": 81.59519093046826,
+          "comparison": {
+            "product": "us_7000i8ui_mww",
+            "version": 1669496253040,
+            "method": "mww",
+            "mw": 6.5,
+            "depth_km": 13.5,
+            "centroid": {
+              "lat": 22.9266,
+              "lon": 121.4627
+            },
+            "mw_delta": 0.4330634050243187,
+            "depth_delta_km": -9.5,
+            "centroid_distance_km": 36.07639991993434,
+            "kagan_deg": 64.19502820166218
+          }
+        },
+        "fixed": {
+          "file": "us7000i8ui/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 17,
+          "mw": 6.837149566015499,
+          "centroid_depth_km": 4.0,
+          "centroid_location": {
+            "lat": 23.1191,
+            "lon": 121.4138
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36
+          ],
+          "holdout_vr_pct": 84.26682367184341,
+          "comparison": {
+            "product": "us_7000i8ui_mww",
+            "version": 1669496253040,
+            "method": "mww",
+            "mw": 6.5,
+            "depth_km": 13.5,
+            "centroid": {
+              "lat": 22.9266,
+              "lon": 121.4627
+            },
+            "mw_delta": 0.3371495660154986,
+            "depth_delta_km": -9.5,
+            "centroid_distance_km": 21.899643915685022,
+            "kagan_deg": 45.847530095407485
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000i90q",
+      "name": "90 km E of Yujing, Taiwan",
+      "time_taipei": "2022-09-18T14:44:13.846000+08:00",
+      "catalog_magnitude": 6.9,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000i90q/moment-tensor",
+      "seed": {
+        "origin": 1663483455.648685,
+        "lat": 23.109436099411376,
+        "lon": 121.24245811252318,
+        "depth_km": 11.587778547521204,
+        "id": "us7000i90q",
+        "source": "Tighnari"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 33 7.088743123964099 82.59824064984225",
+        "long-fixed.log": "unconstrained 23 7.154048139782973 89.32249203548216",
+        "control.log": "unconstrained 33 7.088743123964099 85.55141734960335"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000i90q/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 33,
+          "mw": 7.088743123964099,
+          "centroid_depth_km": 8.0,
+          "centroid_location": {
+            "lat": 23.10943609941137,
+            "lon": 121.24245811252318
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            36
+          ],
+          "holdout_vr_pct": 82.59824064984225,
+          "comparison": {
+            "product": "us_7000i90q_mww",
+            "version": 1669496257040,
+            "method": "mww",
+            "mw": 6.9,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.1444,
+              "lon": 121.3074
+            },
+            "mw_delta": 0.1887431239640982,
+            "depth_delta_km": -3.5,
+            "centroid_distance_km": 7.696699397978132,
+            "kagan_deg": 16.209926600575876
+          }
+        },
+        "fixed": {
+          "file": "us7000i90q/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 33,
+          "mw": 7.088743123964099,
+          "centroid_depth_km": 8.0,
+          "centroid_location": {
+            "lat": 23.10943609941137,
+            "lon": 121.24245811252318
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            36
+          ],
+          "holdout_vr_pct": 85.55141734960335,
+          "comparison": {
+            "product": "us_7000i90q_mww",
+            "version": 1669496257040,
+            "method": "mww",
+            "mw": 6.9,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.1444,
+              "lon": 121.3074
+            },
+            "mw_delta": 0.1887431239640982,
+            "depth_delta_km": -3.5,
+            "centroid_distance_km": 7.696699397978132,
+            "kagan_deg": 16.209926600575876
+          }
+        },
+        "low_frequency_fixed": {
+          "file": "us7000i90q/long-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.0015,
+            0.005
+          ],
+          "station_count": 23,
+          "mw": 7.154048139782973,
+          "centroid_depth_km": 4.0,
+          "centroid_location": {
+            "lat": 23.10943609941137,
+            "lon": 121.24245811252318
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+          ],
+          "holdout_vr_pct": 89.32249203548216,
+          "comparison": {
+            "product": "us_7000i90q_mww",
+            "version": 1669496257040,
+            "method": "mww",
+            "mw": 6.9,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.1444,
+              "lon": 121.3074
+            },
+            "mw_delta": 0.2540481397829728,
+            "depth_delta_km": -7.5,
+            "centroid_distance_km": 7.696699397978132,
+            "kagan_deg": 38.0122990273713
+          }
+        },
+        "centroid_usgs_seed": {
+          "file": "us7000i90q/usgs-seed/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 33,
+          "mw": 7.087939227810204,
+          "centroid_depth_km": 8.0,
+          "centroid_location": {
+            "lat": 23.138,
+            "lon": 121.3439
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            36
+          ],
+          "holdout_vr_pct": 85.3996286411018,
+          "comparison": {
+            "product": "us_7000i90q_mww",
+            "version": 1669496257040,
+            "method": "mww",
+            "mw": 6.9,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.1444,
+              "lon": 121.3074
+            },
+            "mw_delta": 0.18793922781020367,
+            "depth_delta_km": -3.5,
+            "centroid_distance_km": 3.8047691233804395,
+            "kagan_deg": 14.688315588135653
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000m9g4",
+      "name": "15 km S of Hualien City, Taiwan",
+      "time_taipei": "2024-04-03T07:58:12.173000+08:00",
+      "catalog_magnitude": 7.4,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000m9g4/moment-tensor",
+      "seed": {
+        "origin": 1712102291.2053468,
+        "lat": 23.84651404690007,
+        "lon": 121.55585852684125,
+        "depth_km": 10.244285214516623,
+        "id": "us7000m9g4",
+        "source": "Tighnari"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [
+        {
+          "id": "us7000m9gc",
+          "separation_s": 793.093
+        }
+      ],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 38 7.412383261461057 91.92998558558912",
+        "long-fixed.log": "unconstrained 32 7.434870258118206 91.20962114716947",
+        "control.log": "unconstrained 38 7.457846132869755 91.7527730013584"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000m9g4/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 38,
+          "mw": 7.412383261461057,
+          "centroid_depth_km": 20.0,
+          "centroid_location": {
+            "lat": 23.846232625642173,
+            "lon": 121.85034504091485
+          },
+          "offset_km": [
+            30,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52
+          ],
+          "holdout_vr_pct": 91.92998558558912,
+          "comparison": {
+            "product": "us_7000m9g4_mww",
+            "version": 1718229111040,
+            "method": "mww",
+            "mw": 7.4,
+            "depth_km": 35.5,
+            "centroid": {
+              "lat": 24.1201,
+              "lon": 121.9066
+            },
+            "mw_delta": 0.01238326146105706,
+            "depth_delta_km": -15.5,
+            "centroid_distance_km": 30.868491274993037,
+            "kagan_deg": 8.391063039808635
+          }
+        },
+        "fixed": {
+          "file": "us7000m9g4/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 38,
+          "mw": 7.457846132869755,
+          "centroid_depth_km": 20.0,
+          "centroid_location": {
+            "lat": 23.846514046900065,
+            "lon": 121.55585852684125
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48
+          ],
+          "holdout_vr_pct": 91.7527730013584,
+          "comparison": {
+            "product": "us_7000m9g4_mww",
+            "version": 1718229111040,
+            "method": "mww",
+            "mw": 7.4,
+            "depth_km": 35.5,
+            "centroid": {
+              "lat": 24.1201,
+              "lon": 121.9066
+            },
+            "mw_delta": 0.05784613286975482,
+            "depth_delta_km": -15.5,
+            "centroid_distance_km": 46.82092028663628,
+            "kagan_deg": 13.312738670901954
+          }
+        },
+        "low_frequency_fixed": {
+          "file": "us7000m9g4/long-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.0015,
+            0.005
+          ],
+          "station_count": 32,
+          "mw": 7.434870258118206,
+          "centroid_depth_km": 20.0,
+          "centroid_location": {
+            "lat": 23.846514046900065,
+            "lon": 121.55585852684125
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56
+          ],
+          "holdout_vr_pct": 91.20962114716947,
+          "comparison": {
+            "product": "us_7000m9g4_mww",
+            "version": 1718229111040,
+            "method": "mww",
+            "mw": 7.4,
+            "depth_km": 35.5,
+            "centroid": {
+              "lat": 24.1201,
+              "lon": 121.9066
+            },
+            "mw_delta": 0.034870258118205655,
+            "depth_delta_km": -15.5,
+            "centroid_distance_km": 46.82092028663628,
+            "kagan_deg": 11.808626861000873
+          }
+        },
+        "centroid_usgs_seed": {
+          "file": "us7000m9g4/usgs-seed/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 38,
+          "mw": 7.446652775818465,
+          "centroid_depth_km": 20.0,
+          "centroid_location": {
+            "lat": 23.835599999999996,
+            "lon": 121.5976
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52
+          ],
+          "holdout_vr_pct": 92.01982914836834,
+          "comparison": {
+            "product": "us_7000m9g4_mww",
+            "version": 1718229111040,
+            "method": "mww",
+            "mw": 7.4,
+            "depth_km": 35.5,
+            "centroid": {
+              "lat": 24.1201,
+              "lon": 121.9066
+            },
+            "mw_delta": 0.0466527758184645,
+            "depth_delta_km": -15.5,
+            "centroid_distance_km": 44.517516209344436,
+            "kagan_deg": 11.414996813586413
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000m9gc",
+      "name": "15 km NNE of Hualien City, Taiwan",
+      "time_taipei": "2024-04-03T08:11:25.266000+08:00",
+      "catalog_magnitude": 6.4,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000m9gc/moment-tensor",
+      "seed": {
+        "origin": 1712103085.266,
+        "lat": 24.1021,
+        "lon": 121.6812,
+        "depth_km": 13.931,
+        "id": "us7000m9gc",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": false,
+      "other_catalog_events_within_2000s": [
+        {
+          "id": "us7000m9g4",
+          "separation_s": -793.093
+        }
+      ],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 42 7.584620088894074 -10.220345376859273",
+        "long-fixed.log": "unconstrained 37 7.505512281556985 -21.755792164196624",
+        "control.log": "unconstrained 42 7.611286993187525 -8.196811445047864"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000m9gc/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "holdout_fit",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 42,
+          "mw": 7.584620088894074,
+          "centroid_depth_km": 88.0,
+          "centroid_location": {
+            "lat": 23.830955343529624,
+            "lon": 121.38674907563866
+          },
+          "offset_km": [
+            -30,
+            -30
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": -10.220345376859273,
+          "comparison": {}
+        },
+        "fixed": {
+          "file": "us7000m9gc/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "holdout_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 42,
+          "mw": 7.611286993187525,
+          "centroid_depth_km": 80.0,
+          "centroid_location": {
+            "lat": 24.1021,
+            "lon": 121.6812
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": -8.196811445047864,
+          "comparison": {}
+        },
+        "low_frequency_fixed": {
+          "file": "us7000m9gc/long-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "holdout_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.0015,
+            0.005
+          ],
+          "station_count": 37,
+          "mw": 7.505512281556985,
+          "centroid_depth_km": 100.0,
+          "centroid_location": {
+            "lat": 24.1021,
+            "lon": 121.6812
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": -21.755792164196624,
+          "comparison": {}
+        }
+      }
+    },
+    {
+      "id": "us6000mt0r",
+      "name": "29 km S of Hualien City, Taiwan",
+      "time_taipei": "2024-04-23T02:26:52.852000+08:00",
+      "catalog_magnitude": 6.1,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000mt0r/moment-tensor",
+      "seed": {
+        "origin": 1713810412.852,
+        "lat": 23.7141,
+        "lon": 121.6599,
+        "depth_km": 9,
+        "id": "us6000mt0r",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [
+        {
+          "id": "us6000mt0s",
+          "separation_s": 355.587
+        }
+      ],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 10 6.28681779320935 47.333374879293444",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 4 usable long-period stations",
+        "control.log": "unconstrained 10 6.167983276782845 51.33380308956919"
+      },
+      "results": {
+        "centroid": {
+          "file": "us6000mt0r/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 10,
+          "mw": 6.28681779320935,
+          "centroid_depth_km": 8.0,
+          "centroid_location": {
+            "lat": 23.44294685762191,
+            "lon": 121.9534843966817
+          },
+          "offset_km": [
+            30,
+            -30
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+          ],
+          "holdout_vr_pct": 47.333374879293444,
+          "comparison": {
+            "product": "us_6000mt0r_mww",
+            "version": 1719958330040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.3949,
+              "lon": 121.6516
+            },
+            "mw_delta": 0.1868177932093502,
+            "depth_delta_km": -3.5,
+            "centroid_distance_km": 31.309110285706307,
+            "kagan_deg": 47.62064623688252
+          }
+        },
+        "fixed": {
+          "file": "us6000mt0r/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unstable_mechanism",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 10,
+          "mw": 6.167983276782845,
+          "centroid_depth_km": 8.0,
+          "centroid_location": {
+            "lat": 23.714100000000002,
+            "lon": 121.6599
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+          ],
+          "holdout_vr_pct": 51.33380308956919,
+          "comparison": {
+            "product": "us_6000mt0r_mww",
+            "version": 1719958330040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.3949,
+              "lon": 121.6516
+            },
+            "mw_delta": 0.06798327678284544,
+            "depth_delta_km": -3.5,
+            "centroid_distance_km": 35.36214036132447,
+            "kagan_deg": 87.61033701293934
+          }
+        }
+      }
+    },
+    {
+      "id": "us6000mt0s",
+      "name": "13 km SSW of Hualien City, Taiwan",
+      "time_taipei": "2024-04-23T02:32:48.439000+08:00",
+      "catalog_magnitude": 6.1,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000mt0s/moment-tensor",
+      "seed": {
+        "origin": 1713810768.439,
+        "lat": 23.8586,
+        "lon": 121.5662,
+        "depth_km": 10,
+        "id": "us6000mt0s",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [
+        {
+          "id": "us6000mt0r",
+          "separation_s": -355.587
+        }
+      ],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 17 6.419540455407406 12.452756871389893",
+        "long-fixed.log": "unconstrained 11 6.704818299073218 -18.62795598771098",
+        "control.log": "unconstrained 17 6.280851483444717 10.030378072171017"
+      },
+      "results": {
+        "centroid": {
+          "file": "us6000mt0s/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "holdout_fit",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 17,
+          "mw": 6.419540455407406,
+          "centroid_depth_km": 44.0,
+          "centroid_location": {
+            "lat": 24.129177301872314,
+            "lon": 121.27107038049527
+          },
+          "offset_km": [
+            -30,
+            30
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96
+          ],
+          "holdout_vr_pct": 12.452756871389893,
+          "comparison": {
+            "product": "us_6000mt0s_mww",
+            "version": 1719958330040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.8692,
+              "lon": 121.5477
+            },
+            "mw_delta": 0.31954045540740594,
+            "depth_delta_km": 32.5,
+            "centroid_distance_km": 40.26689099816638,
+            "kagan_deg": 35.691263988081445
+          }
+        },
+        "fixed": {
+          "file": "us6000mt0s/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "holdout_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 17,
+          "mw": 6.280851483444717,
+          "centroid_depth_km": 48.0,
+          "centroid_location": {
+            "lat": 23.8586,
+            "lon": 121.5662
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "holdout_vr_pct": 10.030378072171017,
+          "comparison": {
+            "product": "us_6000mt0s_mww",
+            "version": 1719958330040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.8692,
+              "lon": 121.5477
+            },
+            "mw_delta": 0.1808514834447177,
+            "depth_delta_km": 36.5,
+            "centroid_distance_km": 2.220182580487847,
+            "kagan_deg": 37.804969485825374
+          }
+        },
+        "low_frequency_fixed": {
+          "file": "us6000mt0s/long-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "waveform_fit",
+            "holdout_fit",
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.0015,
+            0.005
+          ],
+          "station_count": 11,
+          "mw": 6.704818299073218,
+          "centroid_depth_km": 16.0,
+          "centroid_location": {
+            "lat": 23.8586,
+            "lon": 121.5662
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64
+          ],
+          "holdout_vr_pct": -18.62795598771098,
+          "comparison": {
+            "product": "us_6000mt0s_mww",
+            "version": 1719958330040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.8692,
+              "lon": 121.5477
+            },
+            "mw_delta": 0.6048182990732185,
+            "depth_delta_km": 4.5,
+            "centroid_distance_km": 2.220182580487847,
+            "kagan_deg": 66.38523985186035
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000n7b8",
+      "name": "30 km SSE of Hualien City, Taiwan",
+      "time_taipei": "2024-08-16T07:35:53.943000+08:00",
+      "catalog_magnitude": 6.1,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000n7b8/moment-tensor",
+      "seed": {
+        "origin": 1723764953.943,
+        "lat": 23.7491,
+        "lon": 121.7669,
+        "depth_km": 14,
+        "id": "us7000n7b8",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "replay_global_cmt.py: error: Only 8 usable long-period stations",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 6 usable long-period stations",
+        "control.log": "replay_global_cmt.py: error: Only 8 usable long-period stations",
+        "expanded/replay.log": "unconstrained 15 6.14423089188127 86.61868437587252"
+      },
+      "results": {
+        "expanded_centroid": {
+          "file": "us7000n7b8/expanded/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 15,
+          "mw": 6.14423089188127,
+          "centroid_depth_km": 24.0,
+          "centroid_location": {
+            "lat": 23.749100000000002,
+            "lon": 121.7669
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+          ],
+          "holdout_vr_pct": 86.61868437587252,
+          "comparison": {
+            "product": "us_7000n7b8_mww",
+            "version": 1729957732040,
+            "method": "mww",
+            "mw": 6.1,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.784,
+              "lon": 121.7595
+            },
+            "mw_delta": 0.04423089188126994,
+            "depth_delta_km": 12.5,
+            "centroid_distance_km": 3.9382585521561486,
+            "kagan_deg": 25.247980053850323
+          }
+        }
+      }
+    },
+    {
+      "id": "us6000pl8h",
+      "name": "10 km NE of Yujing, Taiwan",
+      "time_taipei": "2025-01-21T00:17:26.812000+08:00",
+      "catalog_magnitude": 6,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000pl8h/moment-tensor",
+      "seed": {
+        "origin": 1737389847.8879972,
+        "lat": 23.236575739686128,
+        "lon": 120.55530849607611,
+        "depth_km": 16.525510503178804,
+        "id": "us6000pl8h",
+        "source": "Tighnari"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "replay_global_cmt.py: error: Only 4 usable long-period stations",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 2 usable long-period stations",
+        "control.log": "replay_global_cmt.py: error: Only 4 usable long-period stations",
+        "expanded/replay.log": "unconstrained 12 6.116282021248339 63.655368378893776"
+      },
+      "results": {
+        "expanded_centroid": {
+          "file": "us6000pl8h/expanded/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "horizontal_grid_edge",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 12,
+          "mw": 6.116282021248339,
+          "centroid_depth_km": 24.0,
+          "centroid_location": {
+            "lat": 23.50718301731114,
+            "lon": 120.84903506935268
+          },
+          "offset_km": [
+            30,
+            30
+          ],
+          "near_optimum_depth_km": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+          ],
+          "holdout_vr_pct": 63.655368378893776,
+          "comparison": {
+            "product": "us_6000pl8h_mww",
+            "version": 1743286364040,
+            "method": "mww",
+            "mw": 6.0,
+            "depth_km": 11.5,
+            "centroid": {
+              "lat": 23.1333,
+              "lon": 120.4704
+            },
+            "mw_delta": 0.11628202124833908,
+            "depth_delta_km": 12.5,
+            "centroid_distance_km": 56.69450884705269,
+            "kagan_deg": 32.05153760653109
+          }
+        }
+      }
+    },
+    {
+      "id": "us7000rkjm",
+      "name": "2025 Taitung, Taiwan Earthquake",
+      "time_taipei": "2025-12-24T17:47:06.669000+08:00",
+      "catalog_magnitude": 6,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rkjm/moment-tensor",
+      "seed": {
+        "origin": 1766569626.669,
+        "lat": 22.8982,
+        "lon": 121.2494,
+        "depth_km": 8,
+        "id": "us7000rkjm",
+        "source": "USGS hypocenter"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "replay_global_cmt.py: error: Only 1 usable long-period stations",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 2 usable long-period stations",
+        "control.log": "replay_global_cmt.py: error: Only 1 usable long-period stations",
+        "expanded/replay.log": "replay_global_cmt.py: error: Only 6 usable long-period stations"
+      },
+      "results": {}
+    },
+    {
+      "id": "us7000rl2n",
+      "name": "29 km ESE of Yilan, Taiwan",
+      "time_taipei": "2025-12-27T23:05:55.388000+08:00",
+      "catalog_magnitude": 6.6,
+      "reference_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rl2n/moment-tensor",
+      "seed": {
+        "origin": 1766847957.5860462,
+        "lat": 24.68815045644031,
+        "lon": 122.04591842502535,
+        "depth_km": 57.909692744461864,
+        "id": "us7000rl2n",
+        "source": "Tighnari"
+      },
+      "has_usgs_mww_tensor": true,
+      "other_catalog_events_within_2000s": [],
+      "attempt_logs": {
+        "centroid.log": "unconstrained 20 6.65453938321787 88.85592503534153",
+        "long-fixed.log": "replay_global_cmt.py: error: Only 9 usable long-period stations",
+        "control.log": "unconstrained 20 6.65453938321787 90.94375745843891"
+      },
+      "results": {
+        "centroid": {
+          "file": "us7000rl2n/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 20,
+          "mw": 6.65453938321787,
+          "centroid_depth_km": 44.0,
+          "centroid_location": {
+            "lat": 24.688150456440308,
+            "lon": 122.04591842502535
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88
+          ],
+          "holdout_vr_pct": 88.85592503534153,
+          "comparison": {
+            "product": "us_7000rl2n_mww",
+            "version": 1775083701040,
+            "method": "mww",
+            "mw": 6.6,
+            "depth_km": 50.5,
+            "centroid": {
+              "lat": 24.4017,
+              "lon": 122.0623
+            },
+            "mw_delta": 0.05453938321787,
+            "depth_delta_km": -6.5,
+            "centroid_distance_km": 31.772398013811976,
+            "kagan_deg": 4.0487693232166295
+          }
+        },
+        "fixed": {
+          "file": "us7000rl2n/result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 20,
+          "mw": 6.65453938321787,
+          "centroid_depth_km": 44.0,
+          "centroid_location": {
+            "lat": 24.688150456440308,
+            "lon": 122.04591842502535
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88
+          ],
+          "holdout_vr_pct": 90.94375745843891,
+          "comparison": {
+            "product": "us_7000rl2n_mww",
+            "version": 1775083701040,
+            "method": "mww",
+            "mw": 6.6,
+            "depth_km": 50.5,
+            "centroid": {
+              "lat": 24.4017,
+              "lon": 122.0623
+            },
+            "mw_delta": 0.05453938321787,
+            "depth_delta_km": -6.5,
+            "centroid_distance_km": 31.772398013811976,
+            "kagan_deg": 4.0487693232166295
+          }
+        },
+        "centroid_usgs_seed": {
+          "file": "us7000rl2n/usgs-seed/centroid-result.json",
+          "status": "unconstrained",
+          "reasons": [
+            "sensitivity_model_missing",
+            "unresolved_centroid",
+            "unresolved_horizontal_centroid"
+          ],
+          "band_hz": [
+            0.002,
+            0.008
+          ],
+          "station_count": 20,
+          "mw": 6.643578948781802,
+          "centroid_depth_km": 44.0,
+          "centroid_location": {
+            "lat": 24.6841,
+            "lon": 122.0354
+          },
+          "offset_km": [
+            0,
+            0
+          ],
+          "near_optimum_depth_km": [
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88
+          ],
+          "holdout_vr_pct": 90.64407825754404,
+          "comparison": {
+            "product": "us_7000rl2n_mww",
+            "version": 1775083701040,
+            "method": "mww",
+            "mw": 6.6,
+            "depth_km": 50.5,
+            "centroid": {
+              "lat": 24.4017,
+              "lon": 122.0623
+            },
+            "mw_delta": 0.04357894878180257,
+            "depth_delta_km": -6.5,
+            "centroid_distance_km": 31.398869375817814,
+            "kagan_deg": 4.534052004128436
+          }
+        }
+      }
+    }
+  ],
+  "decision": {
+    "adoption": "deferred",
+    "scope": "offline research and retained comparisons"
+  },
+  "local_evidence_directory": "runtime/global-cmt-taiwan-2022-2026"
+}

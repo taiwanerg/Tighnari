@@ -1,0 +1,31 @@
+.hoshi-main{max-width:1440px;margin:36px auto;padding:0 24px}.hoshi-login{max-width:440px;margin:10vh auto;padding:32px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#8edbc3}.hoshi-login h1{margin:12px 0}.hoshi-login form,.hoshi-editor form{display:grid;gap:18px}.hoshi-main label{display:grid;gap:8px;font-size:14px}.hoshi-main textarea{font:inherit;color:var(--text);background:#202f3a;border:1px solid #627682;padding:10px;resize:vertical}.hoshi-main input,.hoshi-main select{width:100%;min-width:0}.hoshi-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.hoshi-heading h1{margin:8px 0}.hoshi-filters{display:flex;gap:16px;align-items:end;margin-bottom:20px}.hoshi-filters label:first-child{flex:1}.hoshi-layout{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(400px,1.15fr);gap:20px}.hoshi-list,.hoshi-editor{min-width:0;padding:24px}.hoshi-event{display:block;width:100%;text-align:left;margin:0 0 10px;padding:16px;background:transparent;border:1px solid var(--line);border-radius:6px}.hoshi-event.selected{border-color:#8edbc3;background:#203b3d}.hoshi-event strong,.hoshi-event small{display:block;margin-bottom:6px}.hoshi-event small{color:var(--muted)}.hoshi-event .tags{display:flex;gap:6px;flex-wrap:wrap;font-size:12px}.hoshi-tag{padding:3px 7px;background:#294047;border-radius:3px}.hoshi-tag.error{background:#5e2d2b}.hoshi-tag.confirmed{color:#8edbc3}.hoshi-pager,.hoshi-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.hoshi-pager{justify-content:space-between;margin-top:20px}.hoshi-main .checkbox-line{display:flex;align-items:center}.hoshi-main .checkbox-line input{width:auto}.danger{color:#ffb6a8;border-color:#a45248;background:#402925}#save,#login-submit{background:#8edbc3;color:#10211e;border-color:#8edbc3;font-weight:600}.audit-entry{border-top:1px solid var(--line);padding:14px 0;overflow-wrap:anywhere}.audit-entry p{white-space:pre-wrap;margin:8px 0}.hoshi-main .notice{white-space:pre-wrap}.hoshi-main h2{font-size:20px}.hoshi-main #event-info{overflow-wrap:anywhere;line-height:1.7}#message{position:sticky;top:8px;z-index:5}dialog{max-width:460px;width:calc(100% - 32px);background:var(--panel);color:var(--text);border:1px solid var(--line);padding:28px}dialog::backdrop{background:#0009}dialog label{display:grid;gap:8px}dialog .hoshi-actions{margin-top:24px}@media(max-width:850px){.hoshi-layout{grid-template-columns:1fr}.hoshi-main{padding:0 14px}.hoshi-filters{flex-wrap:wrap}.hoshi-filters label:first-child{flex-basis:100%}.hoshi-login{margin:32px auto}.hoshi-editor,.hoshi-list{padding:18px}}
+.hoshi-captcha-frame{width:320px;max-width:100%;height:100px;border:0}.hoshi-challenge{margin:0;background:transparent;color:#f0f3f5;font:14px sans-serif}
+.hoshi-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.hoshi-row .hoshi-event {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.hoshi-row-delete {
+  flex: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+#confirm-event { overflow-wrap: anywhere; }
+
+#mechanism-research { margin-block: 1.25rem; }
+.mechanism-research-card {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .75rem 0;
+  border-top: 1px solid var(--line, #33464b);
+}
+.mechanism-research-card img { flex: none; margin: 0; }
+.mechanism-research-card p { margin: .18rem 0; overflow-wrap: anywhere; }

@@ -1,0 +1,17 @@
+include LICENSE README.md README.zh-TW.md ADVANCED.zh-TW.md THIRD_PARTY_NOTICES.md CITATION.cff
+include start.py run.bat gdms.bat .env.example
+include requirements-lock.txt
+recursive-include scripts *.py
+global-exclude __pycache__ *.py[cod] .DS_Store
+prune data
+prune runtime
+prune output
+prune resources
+prune .venv
+
+# Server-local administrator/GDMS credentials must never enter source distributions.
+exclude login.txt login.txg .env
+
+# Keep local documentation and tests out of distributions.
+prune docs
+prune tests

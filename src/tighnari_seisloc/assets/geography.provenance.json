@@ -1,0 +1,67 @@
+{
+  "acquired_utc": "2026-11-07T09:10:59.618043+00:00",
+  "taiwan_towns": {
+    "file": "taiwan_towns.geojson.gz",
+    "provider": "Taiwan Ministry of the Interior, National Land Surveying and Mapping Center (NLSC)",
+    "source_url": "https://maps.nlsc.gov.tw/download/鄉鎮市區界線(TWD97經緯度).zip",
+    "catalog_url": "https://maps.nlsc.gov.tw/pro/download.jsp",
+    "license": "Open Government Data License, Taiwan, version 1.0",
+    "license_url": "https://data.gov.tw/license",
+    "source_sha256": "e028e5a750eee48cf7913330655e5e5c5bb1f176868fbd0afdfc661fca60557c",
+    "sha256": "d5b85836ddfb5c5af607f017aad332dbcd6b9631e6aac0952a4f8962aa2ea2bb",
+    "features": 368,
+    "source_crs": "EPSG:3824 (TWD97 geographic / TWD97[2020] label in supplied PRJ)",
+    "output_crs": "WGS84-compatible geographic longitude, latitude (GeoJSON RFC 7946)",
+    "transform": "Null geographic datum transformation from TWD97 to WGS84; no coordinate epoch transformation; approximately metre-level datum accuracy. Not cadastral/survey data.",
+    "simplification": "Douglas-Peucker tolerance 0.00002 degrees (about 2.2 m latitude); rounded to 6 decimals",
+    "patch": "Official Town_Majia_Sanhe.shp replaces main TOWNCODE 10013280 (includes Sanhe detached area).",
+    "source_files": [
+      "TOWN_MOI_1120317.shp",
+      "Town_Majia_Sanhe.shp"
+    ],
+    "fields": [
+      "TOWNID",
+      "TOWNCODE",
+      "COUNTYNAME",
+      "TOWNNAME",
+      "TOWNENG",
+      "COUNTYID",
+      "COUNTYCODE",
+      "name"
+    ],
+    "storage": "Lossless gzip; sha256 refers to decompressed original GeoJSON bytes.",
+    "storage_sha256": "83df0d572f5dfe559dbc8e5f0318fd6df738b3d8b4c7fb7e9f246b14fdadf77e"
+  },
+  "regional_land": {
+    "file": "regional_land.geojson.gz",
+    "provider": "Natural Earth",
+    "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_0_countries.geojson",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "source_sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+    "sha256": "683b00ad8f6cd1581669322584a8b5d9517a07aa2a8912623b08dd1b01cea9b5",
+    "features": 14,
+    "crs": "EPSG:4326",
+    "clip_bbox": [
+      110,
+      10,
+      155,
+      50
+    ],
+    "simplification": "Douglas-Peucker 0.0002 degrees; display only",
+    "storage": "Lossless gzip; sha256 refers to decompressed original GeoJSON bytes.",
+    "storage_sha256": "ecedb749a216be57954db85f897091c8c5e74384e25441f869aff57d0e30fa36"
+  },
+  "license_text": {
+    "file": "AGPL-3.0.txt",
+    "source_url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/AGPL-3.0-only.txt",
+    "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee"
+  },
+  "taiwan_towns_display": {
+    "file": "taiwan_towns_display.geojson.gz",
+    "derived_from": "taiwan_towns",
+    "storage": "Lossless gzip of the existing display-only geometry; coordinates unchanged.",
+    "sha256": "076d5423c856c21bd96c3edf9bbc99b13ff6fba02aa50777d6cd8da730938e16",
+    "storage_sha256": "5e4e1920accff13a4b5ca2ab2a6d13a75f50ab051a750b604ef17777f18b5db9"
+  }
+}

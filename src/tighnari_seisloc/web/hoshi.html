@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Hoshi 管理後台 · Tighnari SeisLOC</title>
+  <link rel="stylesheet" href="/static/style.css?v=20261127-about-v1" />
+  <link rel="stylesheet" href="/static/hoshi.css?v=3" />
+  <script type="module" src="/static/hoshi.js?v=20261127-cap-band-v1"></script>
+</head>
+<body>
+<header><a class="brand" href="/">Tighnari SeisLOC</a><span>Hoshi 管理後台</span><a class="quiet" href="/">返回觀測站</a><button id="logout" hidden>登出</button></header>
+<main class="hoshi-main">
+  <div id="message" class="notice" role="status" aria-live="polite" hidden></div>
+  <section id="login-panel" class="panel hoshi-login">
+    <span class="eyebrow">HOSHI / ADMINISTRATION</span><h1>管理員登入</h1>
+    <p class="muted">使用現有 GDMS 帳號密碼登入。不提供帳號註冊。</p>
+    <form id="login-form">
+      <label>帳號<input id="username" name="username" autocomplete="username" maxlength="256" required /></label>
+      <label>密碼<input id="password" name="password" type="password" autocomplete="current-password" maxlength="512" required /></label>
+      <div id="captcha"></div><button type="submit" id="login-submit">登入後台</button>
+    </form>
+  </section>
+  <section id="workspace" hidden>
+    <div class="hoshi-heading"><div><h1>事件管理</h1></div><button id="refresh">重新整理</button></div>
+    <form id="filters" class="panel hoshi-filters"><label>搜尋地區或事件 ID<input id="search" type="search" maxlength="256" placeholder="例如：臺南、事件 ID" /></label><label>篩選<select id="filter"><option value="all">全部事件</option><option value="pending">待確認</option><option value="automatic">自動（無標記）</option><option value="confirmed">已人工確認</option><option value="error">錯誤事件</option><option value="deleted">已刪除</option></select></label><button type="submit">查詢</button></form>
+    <div class="hoshi-layout">
+      <section class="panel hoshi-list"><div class="panel-head"><h2>事件列表</h2><span id="total" class="muted"></span></div><div id="events" aria-live="polite"></div><div class="hoshi-pager"><button id="prev">上一頁</button><span id="page"></span><button id="next">下一頁</button></div></section>
+      <section class="panel hoshi-editor"><div id="empty-selection" class="muted">選取左側事件，查看資料及操作紀錄。</div>
+        <div id="editor" hidden>
+          <div class="panel-head"><h2 id="event-title"></h2><a id="public-link" target="_blank" rel="noopener">公開頁 ↗</a></div>
+          <p id="event-info" class="muted"></p><p id="deleted-notice" class="notice" hidden>此事件已刪除並從公開頁隱藏，資料與紀錄仍保留。</p>
+          <form id="edit-form">
+            <label>確認狀態<select id="review-status"><option value="pending">待確認</option><option value="automatic">自動（公開頁無標記）</option><option value="confirmed">已人工確認</option></select></label>
+            <label class="checkbox-line"><input id="manual-ml" type="checkbox" /> 手動修訂 ML</label>
+            <label>規模 ML<input id="ml" type="number" min="-3" max="10" step="0.01" disabled /><span class="muted">取消勾選可恢復最新自動規模。</span></label>
+            <label>公開註解<textarea id="comment" maxlength="5000" rows="4" placeholder="人工判讀依據或補充說明"></textarea></label>
+            <label class="checkbox-line"><input id="error-event" type="checkbox" /> 標記為錯誤事件</label><p class="muted">錯誤事件不列入公開列表；直接連結仍顯示錯誤標記。</p>
+            <label>操作原因（僅後台）<input id="reason" maxlength="1000" placeholder="請填寫本次修改原因" required /></label>
+            <div class="hoshi-actions"><button id="save" type="submit">儲存變更</button><button id="delete" class="danger" type="button">刪除事件</button><button id="restore" type="button" hidden>還原事件</button></div>
+          </form>
+          <section id="mechanism-research" hidden aria-labelledby="mechanism-research-title">
+            <h3 id="mechanism-research-title">自動機制試算</h3>
+            <p id="mechanism-research-state" class="muted" role="status"></p>
+            <div id="mechanism-research-candidates"></div>
+          </section>
+          <h3>操作紀錄</h3><div id="audit"></div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-event" class="muted"></p><p id="confirm-text"></p><label>操作原因<input id="confirm-reason" maxlength="1000" required /></label><div class="hoshi-actions"><button value="cancel" formnovalidate>取消</button><button id="confirm-action" value="confirm">確認</button></div></form></dialog>
+</body>
+</html>

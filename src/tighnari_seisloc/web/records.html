@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#10191b" />
+    <title>地震記錄總覽 · Tighnari</title>
+    <link rel="stylesheet" href="/static/style.css?v=20261127-about-v1" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">Tighnari SeisLOC</a>
+      <nav class="site-nav" aria-label="主要導覽"><a href="/">即時觀測</a><a href="/records" aria-current="page">地震記錄總覽</a><a href="/about">關於</a></nav>
+      <span class="header-status" id="records-status" role="status" aria-live="polite">載入記錄…</span>
+    </header>
+    <main class="records-main">
+      <div class="records-heading"><h1>地震記錄總覽</h1></div>
+      <form id="record-filters" class="panel records-filters">
+        <div class="records-presets" aria-label="快速日期範圍"><button type="button" data-days="7" class="active">近 7 日</button><button type="button" data-days="30">近 30 日</button><button type="button" data-days="90">近 90 日</button></div>
+        <label>開始日期<input id="start-date" type="date" required /></label>
+        <label>結束日期<input id="end-date" type="date" required /></label>
+        <label>資料來源<select id="record-mode"><option value="live">即時偵測</option><option value="historical">歷史回放</option><option value="all">全部來源</option></select></label>
+        <label>記錄範圍<select id="record-state"><option value="located">已定位記錄</option><option value="all">含待確認候選</option></select></label>
+        <label class="records-magnitude-filter"><input id="exclude-no-magnitude" type="checkbox" />排除無規模地震</label>
+        <button id="record-query" type="submit" class="primary-button">查詢記錄</button>
+      </form>
+      <p id="record-error" class="record-error" role="alert" hidden></p>
+      <div class="records-layout">
+        <section class="panel records-map-panel">
+          <div class="panel-head"><h2>地震資訊</h2><label class="records-fit"><input id="fit-records" type="checkbox" />顯示全部震央</label></div>
+          <section class="records-selection" aria-label="選取的地震記錄"><div id="selected-record"><p>點選地圖或清單中的地震</p></div></section>
+          <div class="records-map-wrap"><svg id="records-map" role="group" aria-label="指定日期內地震震央分布"></svg><div class="records-map-tools"><button id="map-zoom-in" type="button" aria-label="放大地圖">＋</button><button id="map-zoom-out" type="button" aria-label="縮小地圖">−</button><button id="map-reset" type="button">重設</button></div><p id="map-empty" class="records-map-empty" hidden>此日期範圍沒有符合條件的記錄</p></div>
+          <div class="records-map-legend"><span><i style="background:#8edbc3"></i>深度 &lt;30 km</span><span><i style="background:#77b9dc"></i>30–70 km</span><span><i style="background:#b8a9df"></i>70–150 km</span><span><i style="background:#edb271"></i>≥150 km</span><span><i style="background:#ffffff"></i>未知深度</span><span><i class="location-boundary-key"></i>定位範圍</span></div>
+          <p id="map-note" class="wave-note" hidden></p>
+        </section>
+        <aside class="records-sidebar">
+          <section class="panel records-chart-panel"><div class="panel-head"><h2 id="count-chart-title">每日記錄數</h2></div><svg id="count-chart" role="img" aria-label="日期內地震數量分布"></svg></section>
+          <section class="panel records-distribution"><div class="panel-head"><h2>規模分布</h2></div><div id="magnitude-distribution"></div></section>
+
+        </aside>
+      </div>
+      <section class="panel records-metrics" aria-label="地震數量統計">
+        <div><span>地震記錄</span><strong id="metric-total">—</strong></div>
+        <div><span>已計算規模</span><strong id="metric-magnitude">—</strong></div>
+        <div><span>尚無規模</span><strong id="metric-unknown">—</strong></div>
+        <div><span>最大規模</span><strong id="metric-largest">—</strong></div>
+      </section>
+      <section class="panel records-table-panel">
+        <div class="panel-head"><h2>地震清單</h2><div class="controls"><span id="record-page" class="muted"></span><button id="record-prev" type="button">上一頁</button><button id="record-next" type="button">下一頁</button></div></div>
+        <div class="table-scroll"><table class="records-table"><thead><tr><th>發生時間 UTC+8</th><th>震央位置 / 經緯度</th><th>規模</th><th>深度</th><th>GDMS 補強</th><th>品質</th><th>資料</th></tr></thead><tbody id="record-table"></tbody></table></div>
+
+      </section>
+      <footer class="page-footer">地震資訊請以中央氣象署為準。本研究使用氣象署地震及地球物理資料管理系統的觀測資料，資料公開網址為https://gdms.cwa.gov.tw。</footer>
+    </main>
+    <script type="module" src="/static/records.js?v=20261127-best-fit-v1"></script>
+  </body>
+</html>
