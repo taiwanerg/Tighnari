@@ -12,6 +12,8 @@
 
 English · [繁體中文](README.zh-TW.md)
 
+[線上即時展示](https://tighnari.kuuchi.idv.tw/)
+
 </div>
 
 Tighnari-SeisLOC receives live waveforms from public stations, picks P and S
